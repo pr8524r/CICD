@@ -1,0 +1,36 @@
+# used by the CICD-Demo git management scripts to pull/push with appropriate
+# repo
+GITROOT='https://github.com/CICD-Demo'
+GITROOT_PUSH='git@github.com:CICD-Demo'
+
+# login to OSE3 and Gogs
+DEMOUSER='demo'
+DEMOPW='redhat'
+DOMAIN='example.com'
+
+# docker images to cache locally
+IMAGES='docker.io/cicddemo/amq:latest docker.io/cicddemo/gogs:latest docker.io/cicddemo/jenkins:latest'
+
+# proxy server, if you have one
+http_proxy=
+
+# all application microservices repositories
+MONSTER_REPOS='broker restapis emailroute db-iaas db-paas webserver'
+# all additional CICD-Demo development repositories
+DEV_REPOS='docker-amq docker-gogs docker-jenkins gogs-src'
+
+# CICD-DEMO infrastructure project
+INFRA='infra'
+INFRA_REPOS='gogs jenkins'
+
+# Integration test project
+INTEGRATION='integration'
+INTEGRATION_REPOS='broker restapis emailroute db-paas webserver'
+
+# Production project
+PROD='prod'
+PROD_REPOS='broker restapis emailroute db-iaas webserver'
+
+# Endpoints for IaaS-based MySQL
+IAAS_MYSQL_IP=
+IAAS_MYSQL_PORT=3306
